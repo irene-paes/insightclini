@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InsightClíni - Psicanálise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="d-flex justify-content-between align-items-center p-3 border-bottom">
+    <a href="index.html">
+      <img src="img/insightclinifd.png" alt="Insight Clíni" style="height: 60px;">
+    </a>
+
+    <nav class="d-none d-md-flex gap-3">
+      <a href="index.html" title="Home"><img src="img/home.svg" style="height: 24px;"></a>
+      <a href="desafios.html">Desafios que Acolhemos</a>
+      <a href="sobre.html">Sobre Nós</a>
+      <a href="planos.html">Planos</a>
+      <a href="faq.html">Tira Dúvidas</a>
+      <a href="blog.html">Blog</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="d-flex align-items-center gap-3">
+      <a href="agende.html" class="btn btn-primary">Agende sua sessão!</a>
+      <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">☰</button>
+    </div>
+  </header>
+
+  <!-- Menu lateral (Mobile) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuLateral">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a href="index.html" class="d-block mb-2">Home</a>
+      <a href="desafios.html" class="d-block mb-2">Desafios que Acolhemos</a>
+      <a href="sobre.html" class="d-block mb-2">Sobre Nós</a>
+      <a href="planos.html" class="d-block mb-2">Planos</a>
+      <a href="faq.html" class="d-block mb-2">Tira Dúvidas</a>
+      <a href="blog.html" class="d-block mb-2">Blog</a>
+      <a href="contato.html" class="d-block mb-2">Contato</a>
+    </div>
+  </div>
+
+    <section class="container py-5">
+        <h1 class="text-center fw-bold text-uppercase mb-4" style="color: #640264;">❓ Tira Dúvidas ❓</h1>
+        <p class="text-center lead">Aqui estão as respostas para as dúvidas mais comuns sobre o InsightClini.</p>
+
+        <div class="accordion" id="faqAccordion">
+          
+            <!-- Pergunta 1 - Como funciona o InsightCard? -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Como funciona o InsightCard?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        O **InsightCard** é um programa de associação que garante **benefícios exclusivos**, incluindo:<br>
+                        ✅ **Descontos especiais** em sessões individuais e pacotes.<br>
+                        ✅ **Prioridade no agendamento**, com horários reservados para membros.<br>
+                        ✅ **Acesso a conteúdos exclusivos** sobre saúde emocional.<br>
+                        ✅ **Participação em grupos terapêuticos e eventos temáticos.**<br>
+                        Para aderir ao **InsightCard**, basta realizar o **cadastro** e escolher o **plano de assinatura**.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        Quais são os valores das sessões e pacotes?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Os valores variam de acordo com o plano escolhido:<br>
+                        ✅ **Sessão única** – Atendimento individual.<br>
+                        ✅ **Plano Quinzenal** – Duas sessões por mês.<br>
+                        ✅ **Plano Mensal** – Quatro sessões por mês.<br>
+                        ✅ Pacientes **associados ao InsightCard** recebem **descontos especiais**!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                        É possível parcelar o pagamento?
+                    </button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Sim! O parcelamento é feito de acordo com a **frequência das sessões**. Exemplo:<br>
+                        📌 **Se o paciente faz 2 sessões por mês e compra um pacote de 10 sessões, o parcelamento será em 5x.**
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 - Como agendar uma sessão? -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Como posso agendar uma sessão?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Você pode agendar sua sessão de forma rápida e prática:<br>
+                        ✅ **Área de Agendamento no Site** – Escolha seu horário e finalize seu agendamento.<br>
+                        ✅ **WhatsApp** – Link direto para agendamento disponível no WhatsApp.<br>
+                        ✅ **Redes Sociais** – Acesse nossos perfis e encontre o link para marcação.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 - Sessões Online -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        As sessões são presenciais ou online?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        As sessões são realizadas **exclusivamente online**, por meio de chamada de vídeo no **Google Meet**. Isso garante **flexibilidade**, **conforto** e **acessibilidade** para pacientes de qualquer lugar.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 - Atendimento para Adolescentes -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        A InsightClini atende crianças e adolescentes?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Não realizamos atendimento para crianças. O atendimento é exclusivo para **adolescentes a partir de 17 anos** e adultos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 - Política de Cancelamento -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Posso cancelar ou reagendar minha sessão?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Sim! Temos uma **Política de Cancelamento e Reembolso**:<br>
+                        ✔️ **Cancelamento com mais de 24h de antecedência:** reembolso total ou reagendamento gratuito.<br>
+                        ✔️ **Cancelamento com menos de 24h:** sem reembolso, mas possível reagendar conforme disponibilidade.<br>
+                        ✔️ **Não comparecimento sem aviso:** sem reembolso; novo agendamento requer pagamento.<br>
+                        ✔️ **Reembolsos:** processados em até **7 dias úteis**, mediante solicitação via **e-mail insightclini@gmail.com** ou **WhatsApp (31) 98983-4123**.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 8 - O que esperar das primeiras sessões? -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                        O que esperar das primeiras sessões?
+                    </button>
+                </h2>
+                <div id="faq8" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        As primeiras sessões são focadas em:<br>
+                        📌 **Entender suas necessidades emocionais e objetivos terapêuticos.**<br>
+                        📌 **Estabelecer um vínculo de confiança, criando um ambiente seguro para sua jornada.**<br>
+                        📌 **Explorar padrões emocionais e comportamentais, iniciando sua reflexão e autoconhecimento.**<br>
+                        Não é necessário ter respostas prontas: **o processo acontece no seu ritmo**.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 9 - Diferença entre terapia e psicanálise -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                        Qual é a diferença entre terapia e psicanálise?
+                    </button>
+                </h2>
+                <div id="faq9" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        A **terapia** envolve diversas abordagens e pode focar no bem-estar geral, oferecendo suporte emocional.<br>
+                        Já a **psicanálise** investiga **camadas mais profundas da mente**, analisando comportamentos inconscientes e padrões que impactam sua vida.<br>
+                        O **InsightClini** utiliza a **psicanálise como ferramenta terapêutica**, promovendo um entendimento mais profundo da sua história e emoções.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 10 - Importância do cuidado emocional -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                        Por que o cuidado emocional é tão importante?
+                    </button>
+                </h2>
+                <div id="faq10" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Cuidar da **saúde mental** é fundamental para viver com mais qualidade:<br>
+                        ✔️ **Fortalece sua autoestima e autoconhecimento.**<br>
+                        ✔️ **Ajuda a lidar com desafios e emoções difíceis.**<br>
+                        ✔️ **Melhora relações pessoais e profissionais.**<br>
+                        ✔️ **Previne crises e traz equilíbrio emocional.**<br>
+                        Seu bem-estar emocional é **tão essencial quanto sua saúde física!**
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Suporte e Contato -->
+        <h2 class="fw-bold text-center mt-5">📞 Suporte e Contato</h2>
+        <p class="text-center lead">Se não encontrou sua resposta, entre em contato conosco!</p>
+        <div class="text-center">
+            <a href="https://wa.me/5531989834123" target="_blank" rel="noopener noreferrer"class="btn btn-success">WhatsApp</a>
+            <a href="contato.html" class="btn btn-primary">Fale Conosco</a>
+        </div>
+
+        <!-- Depoimentos -->
+<section class="container py-5">
+    <h2 class="text-center fw-bold text-uppercase mb-4" style="color: #640264;">🗣️ O que dizem sobre o InsightClini?</h2>
+    <p class="text-center lead">Veja alguns depoimentos de pacientes que passaram pela experiência terapêutica conosco.</p>
+
+    <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            
+            <!-- Depoimentos de Pacientes -->
+            <div class="carousel-item active">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"O InsightClini me ajudou a enxergar minha vida com mais clareza. O acolhimento é incrível!"</p>
+                    <footer class="blockquote-footer">Juliana Vasconcelos</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Nunca me senti tão compreendido como nas sessões aqui. Um verdadeiro espaço de transformação."</p>
+                    <footer class="blockquote-footer">Ricardo Oliveira</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Sempre tive dificuldade em expressar meus sentimentos, mas aqui encontrei um lugar seguro para isso."</p>
+                    <footer class="blockquote-footer">Marcelo Lima</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"A cada sessão, sinto que estou dando um passo importante para minha evolução emocional."</p>
+                    <footer class="blockquote-footer">Mariana Fonseca</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"O carinho e profissionalismo fazem toda a diferença. Recomendo de olhos fechados!"</p>
+                    <footer class="blockquote-footer">Samuel Costa</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"O atendimento é extremamente humanizado. A abordagem respeitosa fez toda a diferença para mim."</p>
+                    <footer class="blockquote-footer">Vinícius Rocha</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Descobrir o InsightClini foi um divisor de águas na minha vida. Me sinto mais leve e seguro."</p>
+                    <footer class="blockquote-footer">Leonardo Ferreira</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"O processo terapêutico me ajudou a compreender padrões que eu nem sabia que existiam em mim."</p>
+                    <footer class="blockquote-footer">Gustavo Ramos</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Passei por momentos difíceis e o suporte da clínica foi essencial para superar."</p>
+                    <footer class="blockquote-footer">Fernanda Duarte</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Aprendi a lidar com minhas emoções e tomar decisões mais conscientes. Só gratidão!"</p>
+                    <footer class="blockquote-footer">Tatiane Nascimento</footer>
+                </blockquote>
+            </div>
+
+            <!-- Depoimentos sobre o InsightCard -->
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Ter o InsightCard facilitou muito meu acesso às sessões. Melhor investimento que fiz!"</p>
+                    <footer class="blockquote-footer">Lorena Santana</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Com os benefícios do InsightCard, posso manter meu acompanhamento com tranquilidade."</p>
+                    <footer class="blockquote-footer">Thiago Monteiro</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"A possibilidade de ter conteúdo exclusivo e descontos é um grande diferencial."</p>
+                    <footer class="blockquote-footer">Raquel Mendes</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Nunca imaginei que um plano de saúde mental pudesse ser tão acessível e eficiente!"</p>
+                    <footer class="blockquote-footer">Letícia Pereira</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"O programa realmente valoriza quem quer um tratamento contínuo e de qualidade."</p>
+                    <footer class="blockquote-footer">André Souza</footer>
+                </blockquote>
+            </div>
+
+            <!-- Depoimentos sobre Terapia e Psicanálise -->
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"A terapia me trouxe um entendimento sobre mim que eu nunca tive antes."</p>
+                    <footer class="blockquote-footer">Eduardo Martins</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"O InsightClini me mostrou que cuidar da saúde emocional é tão essencial quanto cuidar do corpo."</p>
+                    <footer class="blockquote-footer">Bianca Cardoso</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"A psicanálise me ajudou a ressignificar minha história e lidar melhor com minhas emoções."</p>
+                    <footer class="blockquote-footer">Patrícia Gomes</footer>
+                </blockquote>
+            </div>
+
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Cada sessão me proporciona reflexões profundas e necessárias para o meu crescimento."</p>
+                    <footer class="blockquote-footer">João Cardoso</footer>
+                </blockquote>
+            </div>
+          
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center p-4">
+                    <p>"Hoje, consigo olhar para minha trajetória com mais compaixão e autoestima. A terapia mudou minha vida!"</p>
+                    <footer class="blockquote-footer">Camila Moreira</footer>
+                </blockquote>
+            </div>
+
+        </div>
+
+        <!-- Botões de navegação -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</section>
+
+  <!-- Rodapé -->
+  <footer class="p-4 d-flex justify-content-between align-items-center mt-auto">
+    <div>
+      <p class="mb-1">Atendimento de 9h às 19h de segunda a quinta</p>
+      <p class="mb-0">
+        Whatsapp: <a href="https://wa.me/5531989834123" target="_blank" class="text-decoration-none">(31) 9898.34.123</a> | 
+        <a href="mailto:insightclini@gmail.com">insightclini@gmail.com</a>
+      </p>
+    </div>
+    
+    <div>
+      <a href="https://www.instagram.com/insight.clini/profilecard/?igsh=MWwzaDNjZ3k2Y2tseg==" target="_blank" class="text-white text-decoration-none">
+        <img src="img/InstaLogo.svg" alt="Instagram" style="height: 20px;">@insightclini
+      </a>
+    </div>
+    
+    <div style="height: 20px;">
+      <p>&copy; 2025 InsightClini - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
