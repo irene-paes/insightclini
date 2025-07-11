@@ -128,12 +128,16 @@ nav a:hover {
   footer {
     flex-direction: column;
     justify-content: center;
-    padding: 30px 15px;
+    text-align: center;
+    padding: 20px 10px;
   }
-
   footer div {
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+  }
+  footer a {
+    display: inline-block;
+    margin-top: 5px;
   }
 }
 
@@ -446,4 +450,29 @@ p, ul {
 
 .btn-primary:hover {
     background: #52014d;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 30px;
+  height: 30px;
 }
