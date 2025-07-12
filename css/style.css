@@ -476,18 +476,3 @@ p, ul {
   width: 30px;
   height: 30px;
 }
-.link-custom {
-  /* Herda a cor do texto do elemento pai (o <p>), em vez de usar o azul padrão. */
-  color: inherit; 
-  
-  /* Remove o sublinhado. */
-  text-decoration: none; 
-}
-
-/* BÔNUS: Adiciona um feedback visual para o usuário saber que é um link. */
-.link-custom:hover {
-  /* Você pode fazer o texto ficar um pouco mais claro/escuro ou sublinhado ao passar o mouse */
-  opacity: 0.8; 
-  /* ou */
-  text-decoration: underline;
-}
