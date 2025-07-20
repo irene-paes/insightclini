@@ -1,6 +1,14 @@
 :root {
-  --roxo-escuro: #4d014e; /* você pode ajustar para outro tom de roxo escuro */
+  --roxo-escuro: #4d014e;
+  --roxo-padrao: #640264;
+  --roxo-hover: #820380;
+  --roxo-claro: #e49bef;
+  --verde-whats: #25D366;
+  --verde-hover: #1ebe57;
+  --cinza-claro: #f4f4f4;
 }
+
+/*-------------------------- Estrutura Geral ---------------------------*/
 
 body {
   margin: 0;
@@ -12,47 +20,46 @@ body {
   background-color: #f8f8f8;
 }
 
-h1, h3, h5 {
+h1, h2, h3, h4, h5 {
+  color: var(--roxo-padrao);
   font-weight: bold;
 }
 
-header, footer {
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  background-color: #fff;
-}
-
 header {
+  position: fixed;
   top: 0;
   height: 60px;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px #4d014e; /*linha abaixo do cabeçalho*/
+  background-color: #fff;
+  box-shadow: 0 2px 4px var(--roxo-escuro);
 }
 
 footer {
   position: relative;
-  margin-top: 80px;
   bottom: 0;
   width: 100%;
   height: 70px;
-  background-color: #640264 !important; /* Mantive a cor original */
+  background-color: var(--roxo-padrao) !important;
   color: white !important;
   display: flex;
   align-items: center;
   text-align: center;
+  margin-top: 80px;
 }
 
-footer a, footer a:visited {
+footer a,
+footer a:visited {
   color: white !important;
   text-decoration: none !important;
 }
 
 footer a:hover {
   text-decoration: underline;
-  color: #e49bef;
+  color: var(--roxo-claro);
 }
 
 main {
@@ -60,11 +67,58 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;  /* altura do header - pg. beneficio*/
-  margin-bottom: 40px; /* altura do footer */
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
-/* Index - Corpo da página centralizado com imagem à direita */
+nav a {
+  color: var(--roxo-padrao);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/*-------------------------- Botões ---------------------------*/
+
+.btn-primary {
+  background: var(--roxo-padrao);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #52014d;
+}
+
+.btn-outline-secondary {
+  border-color: var(--roxo-padrao);
+  color: var(--roxo-padrao);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--roxo-padrao);
+  color: #fff;
+}
+
+/*-------------------------- Layouts e Páginas ---------------------------*/
+
+.container.padrao { max-width: 900px; }
+.container.blog { max-width: 800px; }
+.container.materias { max-width: 1100px; }
+
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
 .content-wrapper {
   max-width: 1200px;
   width: 100%;
@@ -73,9 +127,13 @@ main {
   align-items: center;
 }
 
-.text-content {
-  flex: 1;
-  padding-right: 20px;
+.right-bg-image,
+.bg-cover {
+  height: 100vh;
+  background-image: url("img/analiseaten2.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 
 .col-md-7 {
@@ -88,369 +146,169 @@ main {
   padding: 20px;
 }
 
-nav a {
-  color: #640264;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-.btn-primary {
-  background-color: #28a745;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: #218838;
-}
-
 .bg-center {
   background-position: center;
 }
 
-.right-bg-image, .bg-cover {
-  height: 100vh;
-  background-image: url("img/analiseaten2.png");
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
+/*-------------------------- Mobile ---------------------------*/
 
-/*--Mobile--*/
 @media (max-width: 768px) {
-  main {
-    margin-bottom: 120px;
-  }
+  main { margin-bottom: 120px; }
+
   footer {
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 20px 10px;
   }
+
   footer div {
     width: 100%;
     margin-bottom: 10px;
   }
+
   footer a {
     display: inline-block;
     margin-top: 5px;
   }
+
+  #institucional { padding: 15px; }
+
+  #institucional h2 { font-size: 22px; }
+  #institucional h3 { font-size: 18px; }
+
+  #institucional p,
+  #institucional ul li { font-size: 14px; }
 }
 
-/*----*/
+/*-------------------------- Institucional ---------------------------*/
+
+#institucional {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--cinza-claro);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px var(--roxo-escuro);
+  text-align: justify;
+}
+
+#institucional h2 { text-align: center; }
+
+#institucional h3 {
+  font-size: 20px;
+  color: var(--roxo-claro);
+  margin-top: 20px;
+}
+
+#institucional ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#institucional ul li {
+  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  background: var(--roxo-hover);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px var(--roxo-escuro);
+}
+
+/*-------------------------- Offcanvas ---------------------------*/
+
 .offcanvas-body a {
   display: block;
   padding: 12px;
   font-size: 18px;
   font-weight: bold;
-  color: #e49bef;
+  color: var(--roxo-claro);
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
 
 .offcanvas-body a:hover {
-  background-color: #820380;
+  background-color: var(--roxo-hover);
   border-radius: 5px;
 }
 
 .offcanvas-title {
   font-size: 22px;
   font-weight: bold;
-  color: #3a0339;
+  color: var(--roxo-escuro);
 }
 
-/*--Menu Lateral--*/
 #menuLateral {
   width: 210px;
-  background-color: #640264;
+  background-color: var(--roxo-padrao);
 }
-#menuLateral .offcanvas-title {
-  color: #ffffff;
-}
-#menuLateral .offcanvas-body {
-  color: #e49bef;
-}
+
+#menuLateral .offcanvas-title { color: #ffffff; }
+#menuLateral .offcanvas-body { color: var(--roxo-claro); }
+
 #menuLateral .offcanvas-body a:hover {
-  background-color: #820380;
+  background-color: var(--roxo-hover);
   border-radius: 5px;
   color: #fff;
 }
-.container ul {
-  margin-top: 20px;
-  padding-left: 20px;
-}
-.container form {
-  margin-top: 30px;
-}
 
-/*--Pg.beneficios--*/
-h1, h2, h3, h4, h5 {
-  color: #640264;
-}
-
-.benefit-box {
-  background-color: #ffffff;
-}
-
-.card-plan h5 {
-  font-size: 1.5rem;
-}
-
-.btn-outline-secondary {
-  border-color: #640264;
-  color: #640264;
-}
-
-.btn-outline-secondary:hover {
-  background-color: #640264;
-  color: #fff;
-}
-/*-------------------------------------*/
-.display-5 {
-  font-weight: bold !important;
-}
-
-/*-----Sobre Nós---------------------*/
-#institucional {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px #3a0339;
-    text-align: justify;
-}
-
-#institucional h2 {
-    font-size: 24px;
-    color: #4d014e;
-    text-align: center;
-    font-weight: bold;
-}
-
-#institucional h3 {
-    font-size: 20px;
-    color: #e882f8;
-    margin-top: 20px;
-}
-
-#institucional p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-#institucional ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-#institucional ul li {
-    font-size: 16px;
-    margin: 10px 0;
-    padding: 10px;
-    background: #820380;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px #3a0339;
-}
-
-@media (max-width: 768px) {
-    #institucional {
-        padding: 15px;
-    }
-
-    #institucional h2 {
-        font-size: 22px;
-    }
-
-    #institucional h3 {
-        font-size: 18px;
-    }
-
-    #institucional p,
-    #institucional ul li {
-        font-size: 14px;
-    }
-}
-
-/* */
-.container {
-    max-width: 900px;
-}
-
-h1, h3 {
-    color: #640264;
-    font-weight: bold;
-}
+/*-------------------------- Componentes ---------------------------*/
 
 .list-group-item {
-    background-color: #f4f4f4;
-    border: none;
-    font-size: 18px;
-}
-
-.btn-primary {
-    background: #640264;
-    border: none;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    background: #52014d;
-}
-
-/*Faq - Perguntas frequentes*/
-.container {
-    max-width: 800px;
-}
-
-h1, h2 {
-    color: #640264;
-    font-weight: bold;
-}
-
-.carousel-item {
-    background: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0px 3px 8px #640264;
-}
-
-.accordion-button {
-    background: #820380;
-    color: white;
-    font-weight: bold;
-}
-
-.accordion-body {
-    background: #f4f4f4;
-    font-size: 16px;
-}
-
-.blockquote {
-    font-style: italic;
-    color: #555;
-    padding: 20px;
-}
-
-.btn {
-    margin: 5px;
-}
-
-.carousel-control-prev, .corousel-control-next {
-  filter: invert(100%);
-}
-
-/* Blog */
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-
-h1, h2 {
-    color: #640264;
-    font-weight: bold;
-    text-align: center;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-ul li {
-    font-size: 16px;
-    margin: 10px 0;
-    padding: 10px;
-    background: #820380;
-    color: white;
-    border-radius: 5px;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
-    background: #640264;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-/*Materias blog*/
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-h1, h2 {
-    color: #640264;
-    font-weight: bold;
-    text-align: center;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-  list-style-position: inside;
-}
-
-ul li {
-  font-size: 16px;
-  margin: 10px 0;
-  padding: 10px;
-  background: #820380;
-  color: white;
-  border-radius: 5px;
-}
-
-p, ul {
-  text-align: justify;
-  margin-left: 0;
-  padding-left: 0;
+  background-color: var(--cinza-claro);
+  border: none;
+  font-size: 18px;
 }
 
 .card {
-    transition: 0.3s;
-    border-radius: 10px;
+  transition: 0.3s;
+  border-radius: 10px;
 }
 
 .card:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .card-img-top {
-    height: 180px;
-    object-fit: cover;
+  height: 180px;
+  object-fit: cover;
 }
 
-.card-title {
-    font-weight: bold;
+.card-title { font-weight: bold; }
+.card-text { text-align: justify; }
+
+.carousel-item {
+  background: var(--cinza-claro);
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px var(--roxo-padrao);
 }
 
-.card-text {
-    text-align: justify;
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
 }
 
-.btn-primary {
-    background: #640264;
-    border: none;
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+.accordion-button {
+  background: var(--roxo-hover);
+  color: white;
+  font-weight: bold;
 }
 
-.btn-primary:hover {
-    background: #52014d;
+.accordion-body {
+  background: var(--cinza-claro);
+  font-size: 16px;
 }
+
+.blockquote {
+  font-style: italic;
+  color: #555;
+  padding: 20px;
+}
+
+.btn { margin: 5px; }
+
+/*-------------------------- Botão WhatsApp ---------------------------*/
 
 .whatsapp-float {
   position: fixed;
@@ -459,7 +317,7 @@ p, ul {
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  background-color: #25D366;
+  background-color: var(--verde-whats);
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   display: flex;
@@ -477,6 +335,8 @@ p, ul {
   height: 30px;
 }
 
+/*-------------------------- Chat Flutuante Luna ---------------------------*/
+
 .joinchat_chatbox {
   position: fixed;
   bottom: 20px;
@@ -486,55 +346,4 @@ p, ul {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   font-family: Arial, sans-serif;
-  z-index: 9999;
-}
-
-.joinchat_header {
-  background: #640264;
-  color: #fff;
-  padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.joinchat_close {
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.joinchat_bubble {
-  background-color: #f7f7f7;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 10px;
-  font-size: 15px;
-}
-
-.joinchat_open {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-  cursor: pointer;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 0 0 10px 10px;
-  transition: background 0.3s;
-}
-
-.joinchat_open:hover {
-  background-color: #1ebe57;
-}
-
-.joinchat_open_text {
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.joinchat_open_icon {
-  width: 30px;
-  height: 30px;
-}
+  z-index: 999
