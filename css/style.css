@@ -309,7 +309,7 @@ nav a:hover {
 .btn { margin: 5px; }
 
 /*-------------------------- Botão WhatsApp ---------------------------*/
-
+/*
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -333,11 +333,11 @@ nav a:hover {
 .whatsapp-float img {
   width: 30px;
   height: 30px;
-}
+}*/
 
 /*-------------------------- Chat Flutuante Luna ---------------------------*/
 
-.joinchat_chatbox {
+/*.joinchat_chatbox {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -347,3 +347,120 @@ nav a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   font-family: Arial, sans-serif;
   z-index: 999
+}*/
+
+/* Chat flutuante da Luna */
+.luna-chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 9999;
+  animation: slideUp 1.2s ease-out;
+}
+
+/* Animação de entrada */
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Cabeçalho da caixinha */
+.luna-header {
+  background: #640264;
+  color: white;
+  padding: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Botão de fechar */
+.luna-close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Área de rolagem e conteúdo */
+.luna-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.luna-content {
+  padding: 10px;
+}
+
+/* Balão de fala */
+.luna-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.luna-bubble {
+  display: flex;
+  align-items: flex-start;
+  background: #f7f7f7;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Avatar da Luna */
+.luna-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* Botão do WhatsApp */
+.luna-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  cursor: pointer;
+  background-color: #25D366;
+  color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  transition: background 0.3s;
+}
+
+.luna-open:hover {
+  background-color: #1ebe57;
+}
+
+.luna-open-text {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.luna-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Esconde o chat quando fechado */
+.luna-chatbox.hidden {
+  display: none;
+}
