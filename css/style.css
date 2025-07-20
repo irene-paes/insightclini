@@ -476,3 +476,65 @@ p, ul {
   width: 30px;
   height: 30px;
 }
+
+.joinchat_chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+
+.joinchat_header {
+  background: #640264;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.joinchat_close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.joinchat_bubble {
+  background-color: #f7f7f7;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.joinchat_open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  transition: background 0.3s;
+}
+
+.joinchat_open:hover {
+  background-color: #1ebe57;
+}
+
+.joinchat_open_text {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.joinchat_open_icon {
+  width: 30px;
+  height: 30px;
+}
