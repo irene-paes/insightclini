@@ -9,45 +9,8 @@
   <link rel="icon" href="/img/favicon.png">
 </head>
 <body>
-
-  <!-- Cabeçalho -->
-  <header class="d-flex justify-content-between align-items-center p-3 border-bottom">
-    <a href="/index.html">
-      <img src="/img/insightclinifd.png" alt="Insight Clíni" style="height: 60px;">
-    </a>
-
-    <nav class="d-none d-md-flex gap-3">
-      <a href="/index.html" title="Home"><img src="/img/home.svg" style="height: 24px;"></a>
-      <a href="/desafios.html">Desafios que Acolhemos</a>
-      <a href="/sobre.html">Sobre Nós</a>
-      <a href="/planos.html">Planos</a>
-      <a href="/faq.html">Tira Dúvidas</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/contato.html">Contato</a>
-    </nav>
-
-    <div class="d-flex align-items-center gap-3">
-      <a href="/agende.html" class="btn btn-primary">Agende sua sessão!</a>
-      <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">☰</button>
-    </div>
-  </header>
-
-  <!-- Menu lateral (Mobile) -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuLateral">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Menu</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <a href="/index.html" class="d-block mb-2">Home</a>
-      <a href="/desafios.html" class="d-block mb-2">Desafios que Acolhemos</a>
-      <a href="/sobre.html" class="d-block mb-2">Sobre Nós</a>
-      <a href="/planos.html" class="d-block mb-2">Planos</a>
-      <a href="/faq.html" class="d-block mb-2">Tira Dúvidas</a>
-      <a href="/blog.html" class="d-block mb-2">Blog</a>
-      <a href="/contato.html" class="d-block mb-2">Contato</a>
-    </div>
-  </div>
+  <!-- Cabeçalho importado -->
+  <div id="header"></div>
 
   <!-- Corpo da Página -->
     <section class="container py-5">
@@ -94,28 +57,28 @@
         </article>
     </section>
 
-  <!-- Rodapé -->
-  <footer class="p-4 d-flex justify-content-between align-items-center mt-auto">
-    <div>
-      <p class="mb-1">Atendimento de 9h às 18h de segunda a quinta</p>
-      <p class="mb-0">
-        Whatsapp: <a href="https://wa.me/5531989834123" target="_blank" class="text-decoration-none">(31) 9898.34.123</a> | 
-        <a href="mailto:insightclini@gmail.com">insightclini@gmail.com</a>
-      </p>
-    </div>
-    
-    <div>
-      <a href="https://www.instagram.com/insight.clini/profilecard/?igsh=MWwzaDNjZ3k2Y2tseg==" target="_blank" class="text-white text-decoration-none">
-        <img src="/img/InstaLogo.svg" alt="Instagram" style="height: 20px;">@insightclini
-      </a>
-    </div>
-    
-    <div style="height: 20px;">
-      <p>&copy; 2025 InsightClini - Todos os direitos reservados</p>
-    </div>
-  </footer>
+   <!-- Rodapé importado -->
+  <div id="footer"></div>
 
-    <script src="/script.js"></script>
+  <!-- Chat da Luna importado -->
+  <div id="chat-luna"></div>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Carregando os componentes externos -->
+  <script>
+    function incluir(id, arquivo) {
+      fetch(arquivo)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(id).innerHTML = html;
+        });
+    }
+
+    incluir("header", "includes/header.html");
+    incluir("footer", "includes/footer.html");
+    incluir("chat-luna", "includes/luna-chat.html");
+  </script>
+  <script src="/script.js"></script>
 </body>
 </html>
