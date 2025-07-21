@@ -1,13 +1,13 @@
 :root {
-  --azul-claro: #A7C6ED;    /* Hover, destaques suaves */
-  --azul-medio: #7FA9DB;    /* Hover em menus, botões */
-  --azul-principal: #507EBB; /* Cor institucional principal */
-  --azul-profundo: #6E7F92; /* Sombra, fundo de rodapé */
-  --verde-suave: #B3D9D0;   /* Fundo de caixas e balões */
-  --rosa-destaque: #F29F9F; /* CTA suaves, botões alternativos */
-  --lavanda-clara: #D9CBEF; /* Fundo alternativo, balão Luna */
-  --verde-whats: #25D366;   /* Botão WhatsApp */
-  --verde-hover: #1ebe57;   /* Hover botão WhatsApp */
+  --azul-claro: #A7C6ED;
+  --azul-medio: #7FA9DB;
+  --azul-principal: #507EBB;
+  --azul-profundo: #6E7F92;
+  --verde-suave: #B3D9D0;
+  --rosa-destaque: #F29F9F;
+  --lavanda-clara: #D9CBEF;
+  --verde-whats: #25D366;
+  --verde-hover: #1ebe57;
   --cinza-claro: #f4f4f4;
 }
 
@@ -16,10 +16,10 @@ body {
   margin: 0;
   margin-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
-  min-height: 120vh;
-  background-color: #f8f8f8;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5 {
@@ -27,19 +27,31 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  height: 60px;
-  width: 100%;
-  z-index: 1000;
+main {
+  flex: 1;
+  margin-top: 60px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
-  box-shadow: 0 2px 4px var(--azul-profundo);
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px var(--azul-profundo);
+}
+.site-header {
+  border-bottom: 1px solid var(--azul-claro);
+  background-color: #fff;
+}
 footer {
   position: relative;
   bottom: 0;
@@ -49,12 +61,12 @@ footer {
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   margin-top: 80px;
 }
 
-footer a,
-footer a:visited {
+footer a {
   color: white;
   text-decoration: none;
 }
@@ -64,15 +76,7 @@ footer a:hover {
   color: var(--azul-claro);
 }
 
-main {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
-
+/* --- Navegação --- */
 nav a {
   color: var(--azul-principal);
   text-decoration: none;
@@ -86,7 +90,7 @@ nav a:hover {
 
 /* --- Botões --- */
 .btn-primary {
-  background: var(--azul-principal);
+  background-color: var(--azul-principal);
   border: none;
   color: white;
   padding: 10px 20px;
@@ -95,7 +99,7 @@ nav a:hover {
 }
 
 .btn-primary:hover {
-  background: var(--azul-profundo);
+  background-color: var(--azul-profundo);
 }
 
 .btn-outline-secondary {
@@ -118,7 +122,7 @@ nav a:hover {
   color: white;
 }
 
-/* --- Layouts --- */
+/* --- Containers --- */
 .container { max-width: 900px; margin: auto; }
 .container.blog { max-width: 800px; }
 .container.materias { max-width: 1100px; }
@@ -132,6 +136,7 @@ nav a:hover {
   align-items: center;
 }
 
+/* --- Imagem de fundo --- */
 .right-bg-image, .bg-cover {
   height: 100vh;
   background-image: url("img/analiseaten2.png");
@@ -140,110 +145,7 @@ nav a:hover {
   background-repeat: no-repeat;
 }
 
-/* --- Mobile --- */
-@media (max-width: 768px) {
-  main { margin-bottom: 120px; }
-
-  footer {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 10px;
-  }
-
-  footer div {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  footer a {
-    display: inline-block;
-    margin-top: 5px;
-  }
-}
-
-/* --- Institucional --- */
-#institucional {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background: var(--cinza-claro);
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px var(--azul-profundo);
-  text-align: justify;
-}
-
-#institucional h2 { text-align: center; color: var(--azul-profundo); }
-#institucional h3 { font-size: 20px; color: var(--azul-claro); margin-top: 20px; }
-
-#institucional ul li {
-  background: var(--azul-medio);
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px var(--azul-profundo);
-}
-
-/* --- Offcanvas --- */
-.offcanvas-body a {
-  font-weight: bold;
-  color: var(--azul-claro);
-  text-decoration: none;
-}
-
-.offcanvas-body a:hover {
-  background-color: var(--azul-medio);
-  border-radius: 5px;
-  color: white;
-}
-
-#menuLateral {
-  background-color: var(--azul-principal);
-}
-
-#menuLateral .offcanvas-body a:hover {
-  background-color: var(--azul-medio);
-}
-
-/* --- Cards e Componentes --- */
-.card:hover {
-  transform: scale(1.02);
-}
-
-.card-img-top {
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-title { font-weight: bold; }
-.card-text { text-align: justify; }
-
-.carousel-item {
-  background: var(--cinza-claro);
-  box-shadow: 0px 3px 8px var(--azul-principal);
-}
-
-.carousel-control-prev, .carousel-control-next {
-  filter: invert(100%);
-}
-
-.accordion-button {
-  background: var(--azul-medio);
-  color: white;
-  font-weight: bold;
-}
-
-.accordion-body {
-  background: var(--cinza-claro);
-  font-size: 16px;
-}
-
-.blockquote {
-  font-style: italic;
-  color: #555;
-  padding: 20px;
-}
-
-/* Chat da Luna */
+/* --- Chat da Luna --- */
 .luna-chatbox {
   position: fixed;
   bottom: 20px;
@@ -252,20 +154,19 @@ nav a:hover {
   max-width: 90%;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   font-family: 'Segoe UI', sans-serif;
   z-index: 9999;
   animation: slideUp 1.2s ease-out;
 }
 
-/* Animação de entrada */
 @keyframes slideUp {
   from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
 .luna-header {
-  background: var(--azul-principal);
+  background-color: var(--azul-principal);
   color: white;
   padding: 12px;
   border-top-left-radius: 12px;
@@ -273,7 +174,6 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
 }
 
 .luna-close {
@@ -299,7 +199,7 @@ nav a:hover {
 .luna-bubble {
   display: flex;
   align-items: flex-start;
-  background: var(--lavanda-clara);
+  background-color: var(--lavanda-clara);
   padding: 14px;
   border-radius: 12px;
   margin-bottom: 12px;
@@ -321,7 +221,6 @@ nav a:hover {
   flex-shrink: 0;
 }
 
-/* Botão de ação do WhatsApp */
 .luna-open {
   display: flex;
   align-items: center;
@@ -350,12 +249,9 @@ nav a:hover {
   margin-right: 10px;
 }
 
-/* Esconde o chat da Luna */
-.luna-chatbox.hidden {
-  display: none;
-}
+/* --- Reabrir Luna --- */
+.luna-chatbox.hidden { display: none; }
 
-/* Botão flutuante para reabrir o chat 💬 */
 .luna-reabrir {
   position: fixed;
   bottom: 90px;
@@ -370,22 +266,17 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 9998;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.luna-reabrir.show {
-  opacity: 1;
-  visibility: visible;
-}
-
 @keyframes pulse {
-  0% { transform: scale(1); box-shadow: 0 0 0 rgba(80, 126, 187, 0.4); }
-  50% { transform: scale(1.1); box-shadow: 0 0 12px rgba(80, 126, 187, 0.4); }
-  100% { transform: scale(1); box-shadow: 0 0 0 rgba(80, 126, 187, 0.4); }
+  0%   { transform: scale(1); box-shadow: 0 0 0 rgba(80,126,187,0.4); }
+  50%  { transform: scale(1.1); box-shadow: 0 0 12px rgba(80,126,187,0.4); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(80,126,187,0.4); }
 }
 
 .luna-reabrir.show {
@@ -394,18 +285,24 @@ nav a:hover {
   animation: pulse 1.6s infinite;
 }
 
-/* Animação: entrada suave do título principal */
-.fade-in-top {
-  animation: fadeTop 1.4s ease-out;
-}
-
-@keyframes fadeTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
+/* --- Responsivo básico --- */
+@media (max-width: 768px) {
+  .luna-chatbox {
+    width: 90%;
+    right: 5%;
+    bottom: 15px;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .luna-reabrir {
+    right: 5%;
+    bottom: 80px;
+  }
+
+  .right-bg-image {
+    display: none;
+  }
+
+  main {
+    margin-bottom: 100px;
   }
 }
