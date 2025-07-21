@@ -15,12 +15,13 @@
         </div>
       </div>
 
-      <div class="luna-open" role="button" tabindex="0" onclick="window.open('https://wa.me/5531989834123','_blank')">
-        <div class="luna-open-text">Ir para o WhatsApp</div>
-        <svg class="luna-icon" width="60" height="60" viewBox="0 0 400 400">
+      <div class="luna-open" role="button" tabindex="0"
+           onclick="window.open('https://wa.me/5531989834123?text=Olá%20Luna%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos.','_blank')">
+        <svg class="luna-icon me-2" width="30" height="30" viewBox="0 0 400 400">
           <circle cx="200" cy="200" r="180" fill="#25D366"/>
           <path d="M150 190 L250 200 L150 210 Z" fill="#fff"/>
         </svg>
+        <div class="luna-open-text">Ir para o WhatsApp</div>
       </div>
     </div>
   </div>
@@ -31,17 +32,20 @@
   💬
 </div>
 
+<!-- Script de funcionalidade -->
 <script>
-  const caixaLuna = document.querySelector('.luna-chatbox');
-  const botaoReabrir = document.getElementById('luna-reabrir');
+  document.addEventListener("DOMContentLoaded", () => {
+    const caixaLuna = document.querySelector('.luna-chatbox');
+    const botaoReabrir = document.getElementById('luna-reabrir');
 
-  document.querySelector('.luna-close').addEventListener('click', () => {
-    caixaLuna.classList.add('hidden');
-    botaoReabrir.classList.add('show');
+    document.querySelector('.luna-close').addEventListener('click', () => {
+      caixaLuna.classList.add('hidden');
+      botaoReabrir.classList.add('show');
+    });
+
+    window.reabrirLuna = function () {
+      caixaLuna.classList.remove('hidden');
+      botaoReabrir.classList.remove('show');
+    };
   });
-
-  function reabrirLuna() {
-    caixaLuna.classList.remove('hidden');
-    botaoReabrir.classList.remove('show');
-  }
 </script>
