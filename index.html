@@ -10,135 +10,53 @@
 </head>
 <body>
 
-  <!-- Cabeçalho -->
-  <header class="d-flex justify-content-between align-items-center p-3 border-bottom">
-    <a href="index.html">
-      <img src="img/insightclinifd.png" alt="Insight Clíni" style="height: 60px;">
-    </a>
-
-    <nav class="d-none d-md-flex gap-3">
-      <a href="index.html" title="Home"><img src="img/home.svg" style="height: 24px;"></a>
-      <a href="desafios.html">Desafios que Acolhemos</a>
-      <a href="sobre.html">Sobre Nós</a>
-      <a href="planos.html">Planos</a>
-      <a href="faq.html">Tira Dúvidas</a>
-      <a href="blog.html">Blog</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-
-    <div class="d-flex align-items-center gap-3">
-      <a href="agende.html" class="btn btn-primary">Agende sua sessão!</a>
-      <button class="btn btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">☰</button>
-    </div>
-  </header>
-
-  <!-- Menu lateral (Mobile) -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuLateral">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">InsightClíni</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <a href="index.html" class="d-block mb-2">Home</a>
-      <a href="desafios.html" class="d-block mb-2">Desafios que Acolhemos</a>
-      <a href="sobre.html" class="d-block mb-2">Sobre Nós</a>
-      <a href="planos.html" class="d-block mb-2">Planos</a>
-      <a href="faq.html" class="d-block mb-2">Tira Dúvidas</a>
-      <a href="blog.html" class="d-block mb-2">Blog</a>
-      <a href="contato.html" class="d-block mb-2">Contato</a>
-    </div>
-  </div>
+  <!-- Cabeçalho importado -->
+  <div id="header"></div>
 
   <!-- Corpo da Página -->
   <main class="p-0 m-0">
     <div class="row g-0 vh-100 w-100">
       
-      <!-- Coluna da Esquerda -->
-      <div class="col-12 col-md-8 d-flex flex-column justify-content-center align-items-center text-center px-3 py-5">
-        <h2 class="display-5"><strong>💬 Cada insight</strong></h2>
-        <h2 class="display-5"><strong>é um passo em direção a si.💙</strong></h2>
-        <p></p>
-        <h3 class="display-8">🌱 Psicanalise para transformar o que te inquieta 🌱 </h3>
-        <p></p>
-        <p class="lead" style="text-align: center;">Na InsightClini, você encontra um espaço acolhedor para autoconhecimento, equilíbrio emocional e transformação profunda.</p>
-        <a href="desafios.html" class="btn btn-outline-primary mt-3">Saiba Mais</a>
+      <!-- Coluna da Esquerda reformulada e animada -->
+      <div class="col-12 col-md-8 d-flex flex-column justify-content-center align-items-center text-center px-4 py-5">
+        <h1 class="display-5 mb-3 fade-in-top">💬 Cada insight é um passo em direção a si 💙</h1>
+        <h3 class="text-muted fst-italic">🌱 Psicanálise para transformar o que te inquieta</h3>
+        <p class="lead mt-4 mb-3">
+          Na <strong>InsightClíni</strong>, acolhemos sua jornada com empatia, escuta ativa e presença acolhedora.<br>
+          Aqui, cada etapa é respeitada e acompanhada com leveza.
+        </p>
+        <a href="desafios.html" class="btn btn-primary px-4 py-2">Comece sua jornada</a>
       </div>
 
       <!-- Coluna da Direita com imagem de fundo -->
-      <div class="col-12 col-md-4 right-bg-image" style="margin:0; padding:0; height:100vh;">
-        <div class="h-100 w-100 bg-cover" style="background-image: url('img/analiseaten2.png'); margin:0; padding:0;"></div>
+      <div class="col-12 col-md-4 right-bg-image">
+        <div class="h-100 w-100 bg-cover" style="background-image: url('img/analiseaten2.png');"></div>
       </div>
       
     </div>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="p-4 d-flex justify-content-between align-items-center mt-auto">
-    <div>
-      <p class="mb-1">Atendimento de 9h às 18h de segunda a quinta</p>
-      <p class="mb-0">
-        Whatsapp: <a href="https://wa.me/5531989834123" target="_blank" class="text-decoration-none">(31) 9898.34.123</a> | 
-        <a href="mailto:insightclini@gmail.com">insightclini@gmail.com</a>
-      </p>
-    </div>
+  <!-- Rodapé importado -->
+  <div id="footer"></div>
 
-    <div>
-      <a href="https://www.instagram.com/insight.clini/profilecard/?igsh=MWwzaDNjZ3k2Y2tseg==" target="_blank" class="text-white text-decoration-none">
-        <img src="img/InstaLogo.svg" alt="Instagram" style="height: 20px;">@insightclini
-      </a>
-    </div>
-    
-    <div style="height: 20px;">
-      <p>&copy; 2025 InsightClini - Todos os direitos reservados</p>
-    </div>
-  </footer>
+  <!-- Chat da Luna importado -->
+  <div id="chat-luna"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Chat flutuante da Luna -->
-  <div class="luna-chatbox" role="dialog" aria-labelledby="luna_label" aria-modal="true">
-    <div class="luna-header">
-      <div id="luna_label"><span>Luna</span></div>
-      <div class="luna-close" role="button" tabindex="0" aria-label="Fechar">×</div>
-    </div>
 
-    <div class="luna-scroll">
-      <div class="luna-content">
-        <div class="luna-chat">
-          <div class="luna-bubble animated">
-            <img src="img/luna-icon.png" alt="Luna" class="luna-avatar">
-            <p>Oie, eu sou a Luna da InsightClíni 💬<br>
-            Estou aqui pra te ajudar e tirar suas dúvidas!</p>
-          </div>
-        </div>
-
-        <div class="luna-open" role="button" tabindex="0" onclick="window.open('https://wa.me/5531989834123','_blank')">
-          <div class="luna-open-text">Ir para o WhatsApp</div>
-          <svg class="luna-icon" width="60" height="60" viewBox="0 0 400 400">
-            <circle cx="200" cy="200" r="180" fill="#25D366"/>
-            <path d="M150 190 L250 200 L150 210 Z" fill="#fff"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Botão para reabrir o chat da Luna -->
-  <div id="luna-reabrir" class="luna-reabrir" onclick="reabrirLuna()" title="Abrir chat da Luna">
-    💬
-  </div>
-
+  <!-- Carregando os componentes externos -->
   <script>
-    const caixaLuna = document.querySelector('.luna-chatbox');
-    const botaoReabrir = document.getElementById('luna-reabrir');
-
-    document.querySelector('.luna-close').addEventListener('click', () => {
-      caixaLuna.classList.add('hidden');
-      botaoReabrir.classList.add('show');
-    });
-
-    function reabrirLuna() {
-      caixaLuna.classList.remove('hidden');
-      botaoReabrir.classList.remove('show');
+    function incluir(id, arquivo) {
+      fetch(arquivo)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(id).innerHTML = html;
+        });
     }
+
+    incluir("header", "includes/header.html");
+    incluir("footer", "includes/footer.html");
+    incluir("chat-luna", "includes/luna-chat.html");
   </script>
 </body>
 </html>

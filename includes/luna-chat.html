@@ -1,0 +1,47 @@
+<!-- Chat flutuante da Luna -->
+<div class="luna-chatbox" role="dialog" aria-labelledby="luna_label" aria-modal="true">
+  <div class="luna-header">
+    <div id="luna_label"><span>Luna</span></div>
+    <div class="luna-close" role="button" tabindex="0" aria-label="Fechar">×</div>
+  </div>
+
+  <div class="luna-scroll">
+    <div class="luna-content">
+      <div class="luna-chat">
+        <div class="luna-bubble animated">
+          <img src="img/luna-icon.png" alt="Luna" class="luna-avatar">
+          <p>Oie, eu sou a Luna da InsightClíni 💬<br>
+          Estou aqui pra te ajudar e tirar suas dúvidas!</p>
+        </div>
+      </div>
+
+      <div class="luna-open" role="button" tabindex="0" onclick="window.open('https://wa.me/5531989834123','_blank')">
+        <div class="luna-open-text">Ir para o WhatsApp</div>
+        <svg class="luna-icon" width="60" height="60" viewBox="0 0 400 400">
+          <circle cx="200" cy="200" r="180" fill="#25D366"/>
+          <path d="M150 190 L250 200 L150 210 Z" fill="#fff"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Botão para reabrir o chat da Luna -->
+<div id="luna-reabrir" class="luna-reabrir" onclick="reabrirLuna()" title="Abrir chat da Luna">
+  💬
+</div>
+
+<script>
+  const caixaLuna = document.querySelector('.luna-chatbox');
+  const botaoReabrir = document.getElementById('luna-reabrir');
+
+  document.querySelector('.luna-close').addEventListener('click', () => {
+    caixaLuna.classList.add('hidden');
+    botaoReabrir.classList.add('show');
+  });
+
+  function reabrirLuna() {
+    caixaLuna.classList.remove('hidden');
+    botaoReabrir.classList.remove('show');
+  }
+</script>
