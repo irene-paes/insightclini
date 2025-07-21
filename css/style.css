@@ -52,6 +52,7 @@ header {
   border-bottom: 1px solid var(--azul-claro);
   background-color: #fff;
 }
+/* --- Rodapé --- */
 footer {
   position: relative;
   bottom: 0;
@@ -79,11 +80,21 @@ footer a:hover {
 .footer-custom {
   background-color: var(--azul-claro);
   font-size: 15px;
+  width: 100%;
+  padding: 32px 0; /* Altura garantida */
+}
+
+.footer-custom a {
+  text-decoration: none;
 }
 
 .footer-custom a:hover {
-  color: var(--azul-profundo);
   text-decoration: underline;
+  color: var(--azul-profundo);
+}
+
+.footer-custom i {
+  color: var(--azul-principal);
 }
 
 @media (max-width: 768px) {
