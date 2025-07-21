@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>InsightClíni - Psicanálise</title>
+
+  <!-- Bootstrap e estilos -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/favicon.png">
 </head>
 <body>
+
   <!-- Cabeçalho importado -->
   <div id="header"></div>
 
@@ -18,7 +21,7 @@
       
       <!-- Coluna da Esquerda reformulada e animada -->
       <div class="col-12 col-md-8 d-flex flex-column justify-content-center align-items-center text-center px-4 py-5">
-        <h1 class="display-5 mb-3 fw-bold fade-in-top">💬 Cada insight é um passo em direção a si 💙</h1>
+        <h1 class="display-5 mb-3 fw-bold fade-in-top">💬 <strong>Cada insight é um passo em direção a si 💙</strong></h1>
         <h3 class="text-muted fst-italic">🌱 Psicanálise para transformar o que te inquieta</h3>
         <p class="lead mt-4 mb-3">
           Na <strong>InsightClíni</strong>, acolhemos sua jornada com empatia, escuta ativa e presença acolhedora.<br>
@@ -38,10 +41,24 @@
   <!-- Rodapé importado -->
   <div id="footer"></div>
 
-  <!-- Chat da Luna importado -->
-  <div id="chat-luna"></div>
+  <!-- Chat da Luna via iframe -->
+  <iframe src="includes/luna-widget.html"
+          style="position: fixed; bottom: 20px; right: 20px; width: 320px; height: 420px; border: none; z-index: 999;"
+          allowtransparency="true"></iframe>
 
+  <!-- Scripts e importações de componentes -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <iframe src="includes/luna-widget.html" style="position: fixed; bottom: 0; right: 0; width: 320px; height: 400px; border: none; z-index: 9999;" allowtransparency="true"></iframe>
+  <script>
+    function incluir(id, arquivo) {
+      fetch(arquivo)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(id).innerHTML = html;
+        });
+    }
+
+    incluir("header", "includes/header.html");
+    incluir("footer", "includes/footer.html");
+  </script>
 </body>
 </html>
