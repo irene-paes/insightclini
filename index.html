@@ -121,12 +121,33 @@
       </div>
     </div>
   </div>
+  <!-- Botão para reabrir o chat da Luna -->
+  <div id="luna-reabrir" class="luna-reabrir" onclick="reabrirLuna()" title="Abrir chat da Luna">
+    💬
+  </div>
 
   <script>
     document.querySelector('.luna-close').addEventListener('click', function () {
       document.querySelector('.luna-chatbox').classList.add('hidden');
     });
   </script>
+
+  <!-- JavaScript: mostrar botão e reabrir -->
+  <script>
+  const caixaLuna = document.querySelector('.luna-chatbox');
+  const botaoReabrir = document.getElementById('luna-reabrir');
+
+  document.querySelector('.luna-close').addEventListener('click', () => {
+    caixaLuna.classList.add('hidden');
+    botaoReabrir.classList.add('show');
+  });
+
+  function reabrirLuna() {
+    caixaLuna.classList.remove('hidden');
+    botaoReabrir.classList.remove('show');
+  }
+  </script>
+
 
 </body>
 </html>
