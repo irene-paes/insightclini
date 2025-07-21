@@ -28,24 +28,4 @@
 </div>
 
 <!-- Botão para reabrir o chat da Luna -->
-<div id="luna-reabrir" class="luna-reabrir" onclick="reabrirLuna()" title="Abrir chat da Luna">
-  💬
-</div>
-
-<!-- Script de funcionalidade -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const caixaLuna = document.querySelector('.luna-chatbox');
-    const botaoReabrir = document.getElementById('luna-reabrir');
-
-    document.querySelector('.luna-close').addEventListener('click', () => {
-      caixaLuna.classList.add('hidden');
-      botaoReabrir.classList.add('show');
-    });
-
-    window.reabrirLuna = function () {
-      caixaLuna.classList.remove('hidden');
-      botaoReabrir.classList.remove('show');
-    };
-  });
-</script>
+<div id="luna-reabrir" class="luna-reabrir" onclick="reabrirLuna()" title="Abrir chat da Luna">💬</div>
