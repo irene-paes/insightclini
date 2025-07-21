@@ -1,0 +1,18 @@
+<!-- Em cada página -->
+<div id="chat-luna"></div>
+
+const caixaLuna = document.querySelector('.luna-chatbox');
+const botaoReabrir = document.getElementById('luna-reabrir');
+const botaoFechar = document.querySelector('.luna-close');
+
+if (caixaLuna && botaoReabrir && botaoFechar) {
+  botaoFechar.addEventListener('click', () => {
+    caixaLuna.classList.add('hidden');
+    botaoReabrir.classList.add('show');
+  });
+
+  window.reabrirLuna = function () {
+    caixaLuna.classList.remove('hidden');
+    botaoReabrir.classList.remove('show');
+  };
+}
