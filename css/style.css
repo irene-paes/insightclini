@@ -317,3 +317,34 @@ nav a:hover {
   border-radius: 50%;
   object-fit: cover;
 }
+/* Esconde o balão da Luna quando fechado */
+.luna-chatbox.hidden {
+  display: none;
+}
+
+/* Botão para reabrir o chat da Luna */
+.luna-reabrir {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--azul-principal);
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.luna-reabrir.show {
+  opacity: 1;
+  visibility: visible;
+}
