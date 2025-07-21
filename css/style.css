@@ -76,6 +76,22 @@ footer a:hover {
   color: var(--azul-claro);
 }
 
+.footer-custom {
+  background-color: var(--azul-claro);
+  font-size: 15px;
+}
+
+.footer-custom a:hover {
+  color: var(--azul-profundo);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-custom .row > div {
+    text-align: center !important;
+  }
+}
+
 /* --- Navegação --- */
 nav a {
   color: var(--azul-principal);
