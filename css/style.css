@@ -53,35 +53,12 @@ header {
   background-color: #fff;
 }
 /* --- Rodapé --- */
-footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 70px;
-  background-color: var(--azul-profundo);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 80px;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  color: var(--azul-claro);
-}
-
 .footer-custom {
   background-color: var(--azul-claro);
   color: var(--azul-profundo);
   width: 100%;
   font-size: 15px;
+  min-height: 70px; /* garante altura mínima */
 }
 
 .footer-custom a {
@@ -102,7 +79,6 @@ footer a:hover {
     padding-bottom: 12px;
   }
 }
-
 /* --- Navegação --- */
 nav a {
   color: var(--azul-principal);
