@@ -49,26 +49,29 @@
     </section>
 
 
-  <!-- Rodapé -->
-  <footer class="p-4 d-flex justify-content-between align-items-center mt-auto">
-    <div>
-      <p class="mb-1">Atendimento de 9h às 18h de segunda a quinta</p>
-      <p class="mb-0">
-        Whatsapp: <a href="https://wa.me/5531989834123" target="_blank" class="text-decoration-none">(31) 9898.34.123</a> | 
-        <a href="mailto:insightclini@gmail.com">insightclini@gmail.com</a>
-      </p>
-    </div>
-    
-    <div>
-      <a href="https://www.instagram.com/insight.clini/profilecard/?igsh=MWwzaDNjZ3k2Y2tseg==" target="_blank" class="text-white text-decoration-none">
-        <img src="/img/InstaLogo.svg" alt="Instagram" style="height: 20px;">@insightclini
-      </a>
-    </div>
-        
-    <div style="height: 20px;">
-      <p>&copy; 2025 InsightClini - Todos os direitos reservados</p>
-    </div>
-  </footer>
+  <!-- Rodapé importado -->
+  <div id="footer"></div>
+
+  <!-- Chat da Luna importado -->
+  <iframe src="includes/luna-widget.html"
+        style="position: fixed; bottom: 20px; right: 20px; width: 320px; height: 420px; border: none; z-index: 999;"
+        allowtransparency="true"></iframe>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Carregando os componentes externos -->
+  <script>
+    function incluir(id, arquivo) {
+      fetch(arquivo)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(id).innerHTML = html;
+        });
+    }
+
+    incluir("header", "includes/header.html");
+    incluir("footer", "includes/footer.html");
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
