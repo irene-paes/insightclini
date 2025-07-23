@@ -46,12 +46,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px var(--azul-profundo);
+  box-shadow: 0 3px 8px rgba(80, 126, 187, 0.4);
 }
 .site-header {
   border-bottom: 1px solid var(--azul-claro);
   background-color: #fff;
 }
+
 /* --- Rodapé --- */
 .footer-custom {
   background-color: var(--azul-claro);
