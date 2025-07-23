@@ -175,6 +175,11 @@ nav a:hover {
 .carousel-control-next::before {
   content: "›";
 }
+.btn-uniform {
+  min-width: 150px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
 /* --- Chat da Luna --- */
 .luna-chatbox {
