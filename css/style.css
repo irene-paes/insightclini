@@ -159,6 +159,23 @@ nav a:hover {
   padding: 40px 24px;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  font-size: 28px;
+  color: var(--azul-profundo);
+}
+/* --- setinhas - Faq - Depoimentos --- */
+.carousel-control-prev::before,
+.carousel-control-next::before {
+  content: "‹";
+  font-size: 28px;
+  color: var(--azul-profundo);
+}
+.carousel-control-next::before {
+  content: "›";
+}
+
 /* --- Chat da Luna --- */
 .luna-chatbox {
   position: fixed;
