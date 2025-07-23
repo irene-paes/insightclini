@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpretação dos Sonhos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/favicon.png">
+</head>
+<body>
+  <!-- Cabeçalho importado -->
+  <div id="header"></div>
+
+  <!-- Corpo da Página -->
+    <section class="container py-5">
+        <h1 class="text-center fw-bold text-uppercase mb-4">🌙 Interpretação dos Sonhos: O Que Eles Revelam Sobre Nós?</h1>
+        <p class="text-center lead">Descubra como os sonhos podem revelar aspectos ocultos da mente.</p>
+
+        <article class="mt-4">
+            <h2 class="fw-bold">📌 O que são os Sonhos?</h2>
+            <p>Os sonhos são manifestações do inconsciente e podem refletir desejos reprimidos, medos e emoções não resolvidas.</p>
+
+            <h2 class="fw-bold mt-4">🔍 Freud e a Interpretação dos Sonhos</h2>
+            <p>Freud acreditava que os sonhos eram uma forma de acessar conteúdos inconscientes. Ele identificou símbolos recorrentes que revelam aspectos profundos da psique.</p>
+
+            <h2 class="fw-bold mt-4">🛠️ Como Interpretar Sonhos?</h2>
+            <ul>
+                <li><strong>✅ Diário de Sonhos:</strong> Registrar sonhos ajuda a identificar padrões.</li>
+                <li><strong>✅ Análise Simbólica:</strong> Cada elemento do sonho pode ter um significado oculto.</li>
+                <li><strong>✅ Associação Livre:</strong> Relacionar o sonho com experiências pessoais.</li>
+            </ul>
+
+            <h2 class="fw-bold mt-4">📞 Quer saber mais?</h2>
+            <p style="text-align: center;">Se deseja entender melhor seus sonhos e o que eles revelam sobre você, entre em contato com a InsightClini e descubra como podemos te ajudar.</p>
+            <div class="text-center">
+                <a href="/contato.html" class="btn btn-primary">Fale Conosco</a>
+            </div>
+        </article>
+    </section>
+
+  <!-- Rodapé importado -->
+  <div id="footer"></div>
+
+  <!-- Chat da Luna importado -->
+  <iframe src="includes/luna-widget.html"
+        style="position: fixed; bottom: 20px; right: 20px; width: 320px; height: 420px; border: none; z-index: 999;"
+        allowtransparency="true"></iframe>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Carregando os componentes externos -->
+  <script>
+    function incluir(id, arquivo) {
+      fetch(arquivo)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById(id).innerHTML = html;
+        });
+    }
+
+    incluir("header", "includes/header.html");
+    incluir("footer", "includes/footer.html");
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
