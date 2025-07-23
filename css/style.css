@@ -175,10 +175,13 @@ nav a:hover {
 .carousel-control-next::before {
   content: "›";
 }
+
 .btn-uniform {
-  min-width: 150px;
-  padding-left: 24px;
-  padding-right: 24px;
+  width: 160px;           /* largura fixa */
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* --- Chat da Luna --- */
