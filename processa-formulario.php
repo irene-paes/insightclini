@@ -1,12 +1,20 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  function limpar($campo) {
-    return htmlspecialchars(trim($campo));
-  }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
+// Carrega PHPMailer
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
+
+function limpar($campo) {
+  return htmlspecialchars(trim($campo));
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $dataHoje = date("d/m/Y");
 
-  // Coletar campos
+  // Coletar dados
   $nome         = limpar($_POST['nome']);
   $email        = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
   $nascimento   = limpar($_POST['nascimento']);
@@ -26,55 +34,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $autoconhecimento = limpar($_POST['autoconhecimento']);
 
   // Corpo do e-mail em HTML
-  $mensagem = "
-  <html>
-  <head>
-    <style>
-      body { font-family: Arial, sans-serif; color: #333; }
-      h2 { color: #640264; }
-      .campo { margin-bottom: 12px; }
-      .label { font-weight: bold; color: #444; }
-      .valor { color: #555; }
-    </style>
-  </head>
-  <body>
-    <h2>📝 Ficha de cadastro – $nome</h2>
-    <p><strong>Data de envio:</strong> $dataHoje</p>
+  $mensagem = "<html><body>";
+  $mensagem .= "<h2>📝 Ficha de cadastro – $nome</h2>";
+  $mensagem .= "<p><strong>Data de envio:</strong> $dataHoje</p>";
+  $mensagem .= "<p><strong>Email:</strong> $email</p>";
+  $mensagem .= "<p><strong>Nascimento:</strong> $nascimento</p>";
+  $mensagem .= "<p><strong>Telefone:</strong> $telefone</p>";
+  $mensagem .= "<p><strong>Contato de emergência:</strong> $emergencia</p>";
+  $mensagem .= "<p><strong>Endereço:</strong> $endereco</p>";
+  $mensagem .= "<p><strong>Profissão:</strong> $profissao</p>";
+  $mensagem .= "<p><strong>Trabalho atual:</strong> $trabalho</p>";
+  $mensagem .= "<p><strong>Estado civil:</strong> $estadoCivil</p>";
+  $mensagem .= "<p><strong>Filhos:</strong> $filhos</p>";
+  $mensagem .= "<p><strong>Irmãos:</strong> $irmaos</p>";
+  $mensagem .= "<p><strong>Terapia anterior:</strong> $terapia</p>";
+  $mensagem .= "<p><strong>Motivo da busca:</strong> $motivo</p>";
+  $mensagem .= "<p><strong>Rotina:</strong> $rotina</p>";
+  $mensagem .= "<p><strong>Sentimentos:</strong> $sentimentos</p>";
+  $mensagem .= "<p><strong>Alegria e angústia:</strong> $alegria</p>";
+  $mensagem .= "<p><strong>Autoconhecimento:</strong> $autoconhecimento</p>";
+  $mensagem .= "<p style='margin-top:20px;'>💙 InsightClíni</p>";
+  $mensagem .= "</body></html>";
 
-    <div class='campo'><span class='label'>Email:</span> <span class='valor'>$email</span></div>
-    <div class='campo'><span class='label'>Nascimento:</span> <span class='valor'>$nascimento</span></div>
-    <div class='campo'><span class='label'>Telefone:</span> <span class='valor'>$telefone</span></div>
-    <div class='campo'><span class='label'>Contato de emergência:</span> <span class='valor'>$emergencia</span></div>
-    <div class='campo'><span class='label'>Endereço:</span> <span class='valor'>$endereco</span></div>
-    <div class='campo'><span class='label'>Profissão e formação:</span> <span class='valor'>$profissao</span></div>
-    <div class='campo'><span class='label'>Trabalho atual:</span> <span class='valor'>$trabalho</span></div>
-    <div class='campo'><span class='label'>Estado civil:</span> <span class='valor'>$estadoCivil</span></div>
-    <div class='campo'><span class='label'>Filhos:</span> <span class='valor'>$filhos</span></div>
-    <div class='campo'><span class='label'>Irmãos:</span> <span class='valor'>$irmaos</span></div>
-    <div class='campo'><span class='label'>Terapia anterior:</span> <span class='valor'>$terapia</span></div>
-    <div class='campo'><span class='label'>Motivo da busca:</span> <span class='valor'>$motivo</span></div>
-    <div class='campo'><span class='label'>Rotina atual:</span> <span class='valor'>$rotina</span></div>
-    <div class='campo'><span class='label'>Sentimentos predominantes:</span> <span class='valor'>$sentimentos</span></div>
-    <div class='campo'><span class='label'>Alegria e angústia:</span> <span class='valor'>$alegria</span></div>
-    <div class='campo'><span class='label'>Autoconhecimento:</span> <span class='valor'>$autoconhecimento</span></div>
+  // Configura PHPMailer
+  $mail = new PHPMailer(true);
+  try {
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'insightclini@gmail.com';      // ✅ seu Gmail
+    $mail->Password   = 'SENHA_DO_APP';                // ✅ senha de app gerada
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
 
-    <p style='margin-top: 20px;'>💙 InsightClíni</p>
-  </body>
-  </html>
-  ";
+    $mail->setFrom('insightclini@gmail.com', 'InsightClíni');
+    $mail->addAddress('insightclini@gmail.com');       // pode ser o mesmo destino
+    $mail->addReplyTo($email, $nome);
 
-  // Envio por e-mail
-  $destino = "insightclini@gmail.com";
-  $assunto = "Ficha de cadastro em $dataHoje – $nome";
-  $headers  = "MIME-Version: 1.0" . "\r\n";
-  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-  $headers .= "From: $email\r\nReply-To: $email\r\n";
+    $mail->isHTML(true);
+    $mail->Subject = "Ficha de cadastro em $dataHoje – $nome";
+    $mail->Body    = $mensagem;
 
-  if (mail($destino, $assunto, $mensagem, $headers)) {
+    $mail->send();
     header("Location: obrigado.html");
     exit;
-  } else {
-    echo "Erro ao enviar. Tente novamente mais tarde.";
+  } catch (Exception $e) {
+    echo "Erro ao enviar: {$mail->ErrorInfo}";
   }
 }
 ?>
