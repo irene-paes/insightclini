@@ -392,3 +392,70 @@ select:focus {
   box-shadow: 0 0 4px rgba(92, 124, 250, 0.3);
   transition: all 0.2s ease-in-out;
 }
+
+/* === Estilo Geral === */
+body {
+  background-color: #fdf5f9;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* === Título e Texto Principal === */
+.titulo-principal {
+  color: #640264;
+}
+
+.descricao-principal {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #5a4d57;
+}
+
+/* === Seções em destaque === */
+.highlight-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(100, 2, 100, 0.05);
+  margin-bottom: 2rem;
+}
+
+/* === Textos internos das seções === */
+.highlight-section h3 {
+  color: #640264;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.highlight-section p,
+.highlight-section ul {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* === Lista de valores com emojis === */
+.highlight-section ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* === Mensagem final === */
+.mensagem-final {
+  color: #3d3d3d;
+  max-width: 780px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+/* === Responsivo para celulares === */
+@media screen and (max-width: 767px) {
+  .highlight-section {
+    padding: 1.5rem;
+  }
+
+  .descricao-principal,
+  .mensagem-final {
+    font-size: 1rem;
+  }
+}
