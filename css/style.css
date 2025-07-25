@@ -397,6 +397,7 @@ select:focus {
 /* === Fonte personalizada === */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap');
 
+/* === Estilo base === */
 body {
   background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
   background-color: #fdf8fd;
@@ -406,20 +407,33 @@ body {
   padding: 0;
 }
 
+/* === Container principal === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* === Cabeçalho institucional === */
+header {
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+
 /* === Título principal === */
 .titulo-principal {
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
   color: #731b85;
-  text-align: center;
-  margin: 2rem 0 1rem;
+  margin: 0;
+  line-height: 1.2;
 }
 
 /* === Descrição central === */
 .descricao-principal {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   font-size: 1.1rem;
   color: #5e4b62;
   line-height: 1.8;
@@ -439,9 +453,45 @@ body {
 }
 
 /* === Títulos das seções === */
+.highlight-section h2,
 .highlight-section h3 {
   color: #731b85;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+/* === Lista de valores === */
+.highlight-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-section li {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* === Rodapé e mensagem final === */
+footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.mensagem-final {
+  font-size: 1.2rem;
+  color: #5e4b62;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* === Animação suave === */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
