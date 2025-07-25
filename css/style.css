@@ -1,6 +1,3 @@
-/* ==================================================
-   VARIÁVEIS DE CORES
-================================================== */
 :root {
   --azul-claro: #A7C6ED;
   --azul-medio: #7FA9DB;
@@ -14,39 +11,31 @@
   --cinza-claro: #f4f4f4;
 }
 
-/* ==================================================
-   ESTRUTURA GERAL
-================================================== */
+/* --- Estrutura Geral --- */
 body {
   margin: 0;
-  margin-top: 60px;
-  font-family: 'Open Sans', Arial, sans-serif;
-  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png') repeat;
-  background-color: #fdf8fd;
-  color: #3f3340;
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ==================================================
-   TIPOGRAFIA
-================================================== */
 h1, h2, h3, h4, h5 {
   color: var(--azul-principal);
   font-weight: bold;
 }
 
-h2 {
-  text-align: center;
-  color: #5c7cfa;
-  font-weight: bold;
-  margin-bottom: 30px;
+main {
+  flex: 1;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ==================================================
-   CABEÇALHO
-================================================== */
 header {
   position: fixed;
   top: 0;
@@ -58,195 +47,19 @@ header {
   align-items: center;
   justify-content: center;
   box-shadow: 0 3px 8px rgba(80, 126, 187, 0.4);
-  padding: 2rem 0 1rem;
-  text-align: center;
 }
-
 .site-header {
   border-bottom: 1px solid var(--azul-claro);
   background-color: #fff;
 }
 
-/* ==================================================
-   NAVEGAÇÃO
-================================================== */
-nav a {
-  color: var(--azul-principal);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-/* ==================================================
-   CONTAINERS
-================================================== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.container.blog { max-width: 800px; }
-.container.materias { max-width: 1100px; }
-.text-content { flex: 1; padding-right: 20px; }
-
-/* ==================================================
-   BOTÕES
-================================================== */
-.btn-primary {
-  background-color: var(--azul-principal);
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: var(--azul-profundo);
-}
-
-.btn-outline-secondary,
-.btn-outline-primary {
-  border-color: var(--azul-principal);
-  color: var(--azul-principal);
-}
-
-.btn-outline-secondary:hover,
-.btn-outline-primary:hover {
-  background-color: var(--azul-principal);
-  color: white;
-}
-
-.btn-uniform {
-  width: 160px;
-  padding: 10px 0;
-  text-align: center;
-  white-space: nowrap;
-}
-
-/* ==================================================
-   MAIN E FUNDO
-================================================== */
-main {
-  flex: 1;
-  margin-top: 60px;
-  margin-bottom: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.right-bg-image, .bg-cover {
-  height: 100vh;
-  background-image: url("img/analiseaten2.png");
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-}
-
-/* ==================================================
-   FORMULÁRIOS
-================================================== */
-form {
-  max-width: 700px;
-  margin: auto;
-  padding: 30px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-}
-
-label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #333;
-}
-
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  font-size: 15px;
-  transition: all 0.2s ease-in-out;
-}
-
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: #5c7cfa;
-  box-shadow: 0 0 4px rgba(92, 124, 250, 0.3);
-}
-
-/* ==================================================
-   SEÇÃO SOBRE
-================================================== */
-.titulo-principal {
-  font-family: 'Great Vibes', cursive;
-  font-size: 3rem;
-  color: #731b85;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.descricao-principal {
-  text-align: center;
-  max-width: 700px;
-  margin: 1rem auto 0;
-  font-size: 1.1rem;
-  color: #5e4b62;
-  line-height: 1.8;
-}
-
-.highlight-section {
-  background: #fff;
-  border-radius: 16px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  box-shadow: 0 4px 12px rgba(115, 27, 133, 0.08);
-  animation: fadeIn 1s ease-out forwards;
-}
-
-.highlight-section h2, .highlight-section h3 {
-  color: #731b85;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.highlight-section ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.highlight-section li {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ==================================================
-   CHAT DA LUNA
-================================================== */
-/* ... Mantive igual ao seu original, me avise se quiser divisão separada para esse componente ... */
-
-/* ==================================================
-   RODAPÉ
-================================================== */
+/* --- Rodapé --- */
 .footer-custom {
   background-color: var(--azul-claro);
   color: var(--azul-profundo);
   width: 100%;
   font-size: 15px;
-  min-height: 70px;
+  min-height: 70px; /* garante altura mínima */
 }
 
 .footer-custom a {
@@ -261,31 +74,242 @@ input:focus, textarea:focus, select:focus {
   color: var(--azul-principal);
 }
 
-footer {
-  margin-top: 2rem;
-  padding: 1rem 0;
+@media (max-width: 768px) {
+  .footer-custom .col-12 {
+    text-align: center !important;
+    padding-bottom: 12px;
+  }
+}
+
+/* --- Navegação --- */
+nav a {
+  color: var(--azul-principal);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* --- Botões --- */
+.btn-primary {
+  background-color: var(--azul-principal);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--azul-profundo);
+}
+
+.btn-outline-secondary {
+  border-color: var(--azul-principal);
+  color: var(--azul-principal);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--azul-principal);
+  color: #fff;
+}
+
+.btn-outline-primary {
+  border-color: var(--azul-principal);
+  color: var(--azul-principal);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--azul-principal);
+  color: white;
+}
+
+/* --- Containers --- */
+.container { max-width: 900px; margin: auto; }
+.container.blog { max-width: 800px; }
+.container.materias { max-width: 1100px; }
+
+.text-content { flex: 1; padding-right: 20px; }
+
+.content-wrapper {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- Imagem de fundo --- */
+.right-bg-image, .bg-cover {
+  height: 100vh;
+  background-image: url("img/analiseaten2.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+/* --- Faq - Depoimentos --- */
+.depoimentos-moldura {
+  border: 1px solid rgba(100, 2, 100, 0.1); /* tom lilás claro */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(100, 2, 100, 0.06);
+  background-color: #fff;
+  padding: 40px 24px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  font-size: 28px;
+  color: var(--azul-profundo);
+}
+/* --- setinhas - Faq - Depoimentos --- */
+.carousel-control-prev::before,
+.carousel-control-next::before {
+  content: "‹";
+  font-size: 28px;
+  color: var(--azul-profundo);
+}
+.carousel-control-next::before {
+  content: "›";
+}
+
+.btn-uniform {
+  width: 160px;           /* largura fixa */
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
+  white-space: nowrap;
 }
 
-.mensagem-final {
-  font-size: 1.2rem;
-  color: #5e4b62;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-/* ==================================================
-   ANIMAÇÕES
-================================================== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* --- Chat da Luna --- */
+.luna-chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+  z-index: 9999;
+  animation: slideUp 1.2s ease-out;
 }
 
 @keyframes slideUp {
   from { transform: translateY(50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+.luna-header {
+  background-color: var(--azul-principal);
+  color: white;
+  padding: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.luna-close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.luna-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.luna-content {
+  padding: 10px;
+}
+
+.luna-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.luna-bubble {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--lavanda-clara);
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.luna-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.luna-open {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 14px;
+  cursor: pointer;
+  background-color: var(--verde-whats);
+  color: white;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  transition: background 0.3s;
+}
+
+.luna-open:hover {
+  background-color: var(--verde-hover);
+}
+
+.luna-open-text {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.luna-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* --- Reabrir Luna --- */
+.luna-chatbox.hidden { display: none; }
+
+.luna-reabrir {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--azul-principal);
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 @keyframes pulse {
@@ -294,15 +318,14 @@ footer {
   100% { transform: scale(1); box-shadow: 0 0 0 rgba(80,126,187,0.4); }
 }
 
-/* ==================================================
-   RESPONSIVO
-================================================== */
-@media (max-width: 768px) {
-  .footer-custom .col-12 {
-    text-align: center !important;
-    padding-bottom: 12px;
-  }
+.luna-reabrir.show {
+  opacity: 1;
+  visibility: visible;
+  animation: pulse 1.6s infinite;
+}
 
+/* --- Responsivo básico --- */
+@media (max-width: 768px) {
   .luna-chatbox {
     width: 90%;
     right: 5%;
@@ -322,3 +345,51 @@ footer {
     margin-bottom: 100px;
   }
 }
+
+form {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+h2 {
+  text-align: center;
+  color: #5c7cfa;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #5c7cfa;
+  box-shadow: 0 0 4px rgba(92, 124, 250, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
