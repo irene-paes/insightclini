@@ -344,7 +344,20 @@ nav a:hover {
   main {
     margin-bottom: 100px;
   }
+
+  /* --- Ajuste de Largura do Menu Lateral para telas menores --- */
+  .offcanvas {
+    width: 250px; /* Largura padrão para o menu lateral */
+  }
 }
+
+/* Para telas muito pequenas, podemos ajustar ainda mais se necessário */
+@media (max-width: 380px) { /* Exemplo: para celulares muito compactos */
+  .offcanvas {
+    width: 220px; /* Reduz um pouco mais para telas bem estreitas */
+  }
+}
+
 
 form {
   max-width: 700px;
@@ -444,8 +457,11 @@ select:focus {
 }
 
 /* Opcional: Se quiser um ícone em vez de texto para o botão de abrir no mobile */
-.site-header .btn.d-md-none {
+.site-header .btn.d-lg-none { /* ATUALIZADO: de d-md-none para d-lg-none */
   font-size: 1.5em; /* Aumenta o tamanho do ícone de hambúrguer */
   padding: 5px 12px; /* Ajusta o padding */
   line-height: 1; /* Alinha o ícone */
+  display: flex; /* Permite alinhar o conteúdo */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
 }
