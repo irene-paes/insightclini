@@ -392,3 +392,60 @@ select:focus {
   box-shadow: 0 0 4px rgba(92, 124, 250, 0.3);
   transition: all 0.2s ease-in-out;
 }
+
+/* --- Melhorias no Menu Lateral (Offcanvas) --- */
+
+.offcanvas-header {
+  background-color: var(--azul-principal); /* Fundo do cabeçalho */
+  color: white; /* Cor do texto no cabeçalho */
+  border-bottom: 1px solid var(--azul-medio); /* Borda sutil */
+}
+
+.offcanvas-title {
+  color: white; /* Garante que o título seja branco no cabeçalho azul */
+  font-weight: bold;
+}
+
+.offcanvas-body {
+  background-color: var(--cinza-claro); /* Fundo suave para o corpo do menu */
+  padding: 20px; /* Aumenta o padding geral */
+}
+
+.offcanvas-body a {
+  color: var(--azul-profundo); /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado padrão */
+  padding: 12px 10px; /* Mais padding para cada item */
+  margin-bottom: 8px; /* Espaçamento entre os links */
+  display: block; /* Faz cada link ocupar a largura total para o padding */
+  border-radius: 6px; /* Bordas arredondadas para os links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+  font-weight: 600; /* Deixa o texto um pouco mais encorpado */
+}
+
+.offcanvas-body a:hover {
+  background-color: var(--azul-claro); /* Fundo ao passar o mouse */
+  color: var(--azul-principal); /* Cor do texto ao passar o mouse */
+  text-decoration: none; /* Garante que não sublinhe no hover */
+}
+
+/* Estilo específico para o botão "Agendar Sessão" dentro do offcanvas */
+.offcanvas-body .btn-primary {
+  margin-top: 20px; /* Espaçamento maior acima do botão */
+  padding: 12px 20px; /* Aumenta o padding do botão */
+  font-size: 1.1em; /* Tamanho maior da fonte */
+  width: 100%; /* Ocupa a largura total */
+  text-align: center;
+}
+
+/* Estilo para o botão de fechar (X) */
+.offcanvas-header .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%); /* Deixa o X branco */
+  opacity: 1; /* Garante que seja totalmente visível */
+}
+
+/* Opcional: Se quiser um ícone em vez de texto para o botão de abrir no mobile */
+.site-header .btn.d-md-none {
+  font-size: 1.5em; /* Aumenta o tamanho do ícone de hambúrguer */
+  padding: 5px 12px; /* Ajusta o padding */
+  line-height: 1; /* Alinha o ícone */
+}
