@@ -1,0 +1,46 @@
+/*
+ * InsightClíni – Adições ao style.css
+ * Adicione estas regras ao seu arquivo css/style.css existente.
+ * Estas classes substituem os inline styles espalhados pelas páginas.
+ */
+
+/* ── Cor principal da marca ───────────────────────────────── */
+:root {
+  --ic-primary: #640264;
+  --ic-primary-light: #f3e6f3;
+}
+
+/* ── Títulos com a cor da marca ───────────────────────────── */
+.titulo-destaque {
+  color: var(--ic-primary);
+}
+
+/* ── Largura máxima de conteúdo em prosa ──────────────────── */
+.conteudo-max {
+  max-width: 800px;
+}
+
+/* ── Seção de depoimentos ─────────────────────────────────── */
+.depoimentos-moldura {
+  background-color: var(--ic-primary-light);
+  border-radius: 1rem;
+}
+
+.depoimentos-moldura .carousel-control-prev-icon,
+.depoimentos-moldura .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* ── Cards de desafios ────────────────────────────────────── */
+.card:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ── Acessibilidade: foco visível ─────────────────────────── */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ic-primary);
+  outline-offset: 2px;
+}
